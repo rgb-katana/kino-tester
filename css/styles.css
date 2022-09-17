@@ -49,3 +49,15 @@ footer {
   height: 5vh;
   background-color: var(--medium-brown);
 }
+
+@media only screen and (max-width: 420px) {
+  main {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 960px) {
+  main {
+    width: 90%;
+  }
+}
