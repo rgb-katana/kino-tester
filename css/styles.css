@@ -133,12 +133,39 @@ footer {
   }
 }
 
-@media only screen and (min-width: 421px) and (max-width: 660px) {
+@media only screen and (min-width: 421px) and (max-width: 520px) {
   main {
     width: 90%;
   }
   .text-block {
     height: 15vh;
+  }
+  header {
+    font-size: 1.5rem;
+  }
+  .test-window {
+    height: 69vh;
+  }
+  .content .text-block > h1 {
+    font-size: 2rem;
+  }
+  .content .text-block > p {
+    font-size: 1rem;
+  }
+  footer {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 521px) and (max-width: 660px) {
+  main {
+    width: 90%;
+  }
+  .text-block {
+    height: 15vh;
+  }
+  header {
+    font-size: 2.5rem;
   }
   .test-window {
     height: 69vh;
@@ -148,6 +175,9 @@ footer {
   }
   .content .text-block > p {
     font-size: 1.5rem;
+  }
+  footer {
+    font-size: 2rem;
   }
 }
 
