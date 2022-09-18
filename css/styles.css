@@ -62,6 +62,7 @@ main {
 .content .text-block > h1 {
   font-size: 6rem;
   text-shadow: 1px 1px 2px black;
+  margin-top: 15px;
   margin-bottom: 5px;
 }
 
@@ -70,6 +71,7 @@ main {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
+  margin-top: 5px;
   margin-bottom: 5px;
 }
 
@@ -152,6 +154,12 @@ li:hover {
 
 .share-buttons > ul {
   list-style: none;
+}
+
+.share-buttons > ul > li {
+  list-style: none;
+  margin-top: 20px;
+  border-bottom: 3px solid var(--main-color);
 }
 
 /* Responsive */
