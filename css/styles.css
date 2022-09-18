@@ -198,7 +198,7 @@ li:hover {
   border-radius: 10px;
   margin: 0 auto;
   width: 90%;
-  height: 75vh;
+  height: 80vh;
   color: black;
 }
 
@@ -217,6 +217,8 @@ li:hover {
 
 .img-part > img {
   width: 40%;
+  max-width: 250px;
+  max-height: 250px;
 }
 
 .many {
@@ -268,13 +270,36 @@ button {
 
 button:hover {
   color: #f97432;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 li:active {
   background-color: #ffe9c9;
 }
 
+#dalton-gif {
+  width: 30vh;
+}
+
+#gus-gif {
+  width: 50vh;
+}
+
+#travolta-gif {
+  width: 30vh;
+}
+
+#review-gif {
+  width: 45vh;
+}
+
+#dolinhead {
+  width: 30vh;
+}
+
+#eraserhead-gif {
+  width: 30vh;
+}
 /* Responsive */
 
 @media screen and (max-width: 380px) {
@@ -463,11 +488,8 @@ li:active {
 }
 
 @media only screen and (min-height: 670px) {
-  .nav-part {
-    padding: 10px;
-  }
   button {
     font-size: 1.5rem;
-    padding: 15px;
+    padding: 10px;
   }
 }

@@ -43,11 +43,15 @@ function goBackward() {
 }
 
 function goForward() {
-  console.log(`backward. current slide is: ${slide}`);
-  currentSlide?.classList.add('hidden');
   slide += 1;
-  currentSlide = document.querySelector(`.question${slide}`);
-  currentSlide.classList.remove('hidden');
+  if (slide >= 11) {
+    return 0;
+  } else {
+    console.log(`backward. current slide is: ${slide}`);
+    currentSlide?.classList.add('hidden');
+    currentSlide = document.querySelector(`.question${slide}`);
+    currentSlide.classList.remove('hidden');
+  }
 }
 
 shareBtn.addEventListener('click', function () {
