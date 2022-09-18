@@ -28,9 +28,27 @@ function showMenuAndText() {
   testWindow.classList.remove('hidden');
 }
 
-function goBackward() {}
+function goBackward() {
+  console.log(`backward. current slide is: ${slide}`);
+  currentSlide?.classList.add('hidden');
+  slide -= 1;
+  currentSlide = document.querySelector(`.question${slide}`);
+  if (slide == 0) {
+    textBlock.classList.remove('hidden');
+    testWindow.classList.remove('hidden');
+    document.querySelector('.nav-part').classList.add('hidden');
+  } else {
+    currentSlide.classList.remove('hidden');
+  }
+}
 
-function goForward() {}
+function goForward() {
+  console.log(`backward. current slide is: ${slide}`);
+  currentSlide?.classList.add('hidden');
+  slide += 1;
+  currentSlide = document.querySelector(`.question${slide}`);
+  currentSlide.classList.remove('hidden');
+}
 
 shareBtn.addEventListener('click', function () {
   hideMenuAndText();
@@ -67,6 +85,7 @@ document
 beginBtn.addEventListener('click', function () {
   hideMenuAndText();
   goForward();
+  document.querySelector('.nav-part').classList.remove('hidden');
 });
 
 backBtn.addEventListener('click', goBackward);

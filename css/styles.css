@@ -198,7 +198,7 @@ li:hover {
   border-radius: 10px;
   margin: 0 auto;
   width: 90%;
-  height: 80vh;
+  height: 75vh;
   color: black;
 }
 
@@ -247,17 +247,17 @@ li:hover {
 
 .nav-part {
   /* background-color: aqua; */
-  width: 100%;
-  position: absolute;
-  bottom: 0%;
-  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  order: 2;
+  text-align: center;
 }
 
 button {
   border: none;
-  background-color: var(--main-color);
-  color: white;
-  padding: 2px;
+  background-color: var(--pure-white);
+  color: var(--main-color);
+  padding: 5px;
 }
 
 .forward {
@@ -463,6 +463,6 @@ button {
   }
   button {
     font-size: 1.5rem;
-    padding: 5px;
+    padding: 15px;
   }
 }
