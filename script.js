@@ -30,3 +30,17 @@ copyLink.addEventListener('click', function () {
   document.querySelector('.link-copied').classList.remove('hidden');
   setTimeout(hideCopiedMsg, 1000);
 });
+
+refuseBtn.addEventListener('click', function () {
+  textBlock.classList.add('hidden');
+  testWindow.classList.add('hidden');
+  document.querySelector('.refuse-window').classList.remove('hidden');
+});
+
+document
+  .querySelector('.back-to-menu-gif')
+  .addEventListener('click', function () {
+    document.querySelector('.refuse-window').classList.add('hidden');
+    textBlock.classList.remove('hidden');
+    testWindow.classList.remove('hidden');
+  });
