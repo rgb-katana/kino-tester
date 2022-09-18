@@ -114,6 +114,51 @@ footer {
   font-size: 3rem;
 }
 
+li:hover {
+  color: var(--footer-color);
+  cursor: pointer;
+}
+
+/* For JavaScript */
+
+.hidden {
+  display: none;
+}
+
+.share-window {
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+  width: 90%;
+  box-shadow: 1px 2px 3px black;
+  margin: 100px auto;
+  color: black;
+  text-align: center;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.link-copied {
+  background-color: var(--main-color);
+  border-radius: 10px;
+  padding: 5px;
+  width: 90%;
+  box-shadow: 1px 2px 3px black;
+  margin: 10px auto;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.share-buttons > ul {
+  list-style: none;
+}
+
+/* Responsive */
+
 @media screen and (max-width: 380px) {
   main {
     width: 100%;
