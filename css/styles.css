@@ -196,15 +196,17 @@ li:hover {
   position: relative;
   background-color: white;
   border-radius: 10px;
-  margin: 3vh auto;
+  margin: 0 auto;
   width: 90%;
   height: 80vh;
   color: black;
 }
 
 .img-part {
+  /* background-color: aqua; */
   width: 90%;
   padding: 10px;
+  height: 40vh;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -213,14 +215,18 @@ li:hover {
   gap: 10px;
 }
 
+.img-part > img {
+  width: 40%;
+}
+
 .many {
-  width: 38%;
-  max-width: 260px;
-  max-height: 260px;
+  width: 20%;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .question-part {
-  /* fsdf */
+  /* background-color: aqua; */
 }
 
 .question-text {
@@ -240,6 +246,7 @@ li:hover {
 }
 
 .nav-part {
+  /* background-color: aqua; */
   width: 100%;
   position: absolute;
   bottom: 0%;
@@ -293,6 +300,12 @@ button {
   footer {
     font-size: 2rem;
   }
+  .question > .question-part > p {
+    font-size: 2rem;
+  }
+  .question > .question-part > ul li {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 381px) and (max-width: 420px) {
@@ -318,6 +331,9 @@ button {
   }
   footer {
     font-size: 2rem;
+  }
+  .question > .question-part ul li {
+    margin-top: 10px;
   }
 }
 
@@ -432,17 +448,6 @@ button {
   }
   .content .text-block > p {
     font-size: 3.2rem;
-  }
-  .img-part img {
-    width: 20%;
-    max-width: 263px;
-    max-height: 263px;
-  }
-  .img-part {
-    margin-top: 150px;
-  }
-  .question-part {
-    margin-top: 150px;
   }
 }
 

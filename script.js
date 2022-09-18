@@ -12,6 +12,12 @@ const testWindow = document.querySelector('.test-window');
 const backToMenu = document.querySelector('.back-to-menu');
 const copyLink = document.querySelector('.copy-link');
 
+const backBtn = document.querySelector('.back');
+const frwdBtn = document.querySelector('.forward');
+
+let slide = 0;
+let currentSlide = document.querySelector(`.question${slide}`);
+
 function hideMenuAndText() {
   textBlock.classList.add('hidden');
   testWindow.classList.add('hidden');
@@ -22,34 +28,9 @@ function showMenuAndText() {
   testWindow.classList.remove('hidden');
 }
 
-function testingPhase() {
-  let slide = 1;
-  const backBtn = document.querySelector('.back');
-  const frwdBtn = document.querySelector('.forward');
-  while (slide < 10) {
-    const currentSlide = document.querySelector(`.question${slide}`);
-    currentSlide.classList.remove('hidden');
-    backBtn.addEventListener('click', function () {
-      if (slide != 1) {
-        slide -= 1;
-      } else if (slide == 1) {
-        currentSlide.classList.add('hidden');
-        showMenuAndText();
-      }
-    });
-    frwdBtn.addEventListener('click', function () {
-      if (slide != 10) {
-        console.log(`we here`);
-        slide += 1;
-        console.log(slide);
-      } else if (slide == 10) {
-        // win
-      }
-    });
-    slide += 1;
-    break;
-  }
-}
+function goBackward() {}
+
+function goForward() {}
 
 shareBtn.addEventListener('click', function () {
   hideMenuAndText();
@@ -85,5 +66,8 @@ document
 
 beginBtn.addEventListener('click', function () {
   hideMenuAndText();
-  testingPhase();
+  goForward();
 });
+
+backBtn.addEventListener('click', goBackward);
+frwdBtn.addEventListener('click', goForward);
