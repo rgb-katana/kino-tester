@@ -38,14 +38,18 @@ function goBackward() {
     testWindow.classList.remove('hidden');
     document.querySelector('.nav-part').classList.add('hidden');
   } else {
+    document.querySelector('.finish').classList.add('hidden');
+    document.querySelector('.forward').classList.remove('hidden');
     currentSlide.classList.remove('hidden');
   }
 }
 
 function goForward() {
   slide += 1;
-  if (slide >= 11) {
-    return 0;
+  console.log(slide);
+  if (slide >= 10) {
+    document.querySelector('.forward').classList.add('hidden');
+    document.querySelector('.finish').classList.remove('hidden');
   } else {
     console.log(`backward. current slide is: ${slide}`);
     currentSlide?.classList.add('hidden');
