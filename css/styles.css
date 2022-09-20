@@ -406,3 +406,9 @@ li:active {
     font-size: 2rem;
   }
 }
+
+@media screen and (min-width: 961px) and (max-width: 1560px) {
+  * {
+    font-size: 2rem;
+  }
+}
