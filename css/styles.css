@@ -1,10 +1,10 @@
 :root {
-  --header-color: #ff7000;
-  --body-color: #ffe9c9;
-  --main-color: #ffac4a;
-  --footer-color: #f97432;
+  --header-color: #212129;
+  --body-color: #40445a;
+  --main-color: #323949;
+  --footer-color: #212129;
   --pure-white: #ffffff;
-  --additional-color: #f9c87c;
+  --additional-color: #3d3e51;
   font-size: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -16,7 +16,7 @@
 }
 
 body {
-  background: var(--body-color);
+  background: var(--main-color);
   color: var(--pure-white);
 }
 
@@ -41,6 +41,13 @@ main {
   padding: 30px;
 }
 
+.main-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -54,10 +61,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 25px;
-  padding: 10px;
-  height: 20vh;
-  margin-top: 10px;
 }
 
 .content .text-block > h1 {
@@ -75,6 +78,7 @@ main {
   text-align: center;
   margin-top: 5px;
   margin-bottom: 5px;
+  padding-bottom: 10px;
   border-bottom: 10px solid white;
 }
 
@@ -105,7 +109,6 @@ main {
 .test-window > ul li {
   border-bottom: 3px solid white;
   padding: 10px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 footer {
@@ -197,12 +200,12 @@ li:hover {
 
 .question {
   position: relative;
-  background-color: white;
+  background-color: var(--body-color);
   border-radius: 10px;
   margin: 0 auto;
   width: 90%;
   height: 80vh;
-  color: black;
+  color: var(--pure-white);
 }
 
 .img-part {
@@ -220,8 +223,8 @@ li:hover {
 
 .img-part > img {
   width: 33%;
-  max-width: 200px;
-  max-height: 200px;
+  /* max-width: 200px;
+  max-height: 200px; */
 }
 
 .many {
@@ -241,7 +244,7 @@ li:hover {
 
 .question > .question-part ul li {
   text-align: center;
-  border-bottom: 3px solid var(--main-color);
+  border-bottom: 3px solid var(--pure-white);
   margin-top: 20px;
   font-size: 2rem;
 }
@@ -285,7 +288,7 @@ li:active {
 }
 
 #gus-gif {
-  width: 50vh;
+  width: 32vh;
 }
 
 #travolta-gif {
@@ -293,7 +296,7 @@ li:active {
 }
 
 #review-gif {
-  width: 45vh;
+  width: 32vh;
 }
 
 #dolinhead {
@@ -305,31 +308,33 @@ li:active {
 }
 
 .backgroundAndText {
-  background-color: var(--main-color);
-  color: var(--pure-white);
+  background-color: var(--pure-white);
+  color: var(--main-color);
 }
 
 .result {
   position: relative;
-  background-color: white;
+  background-color: var(--body-color);
   border-radius: 10px;
   margin: 0 auto;
   width: 90%;
   height: 80vh;
-  color: black;
+  color: var(--pure-white);
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
 }
 
 .poster-part {
   width: 90%;
   margin-bottom: 10px;
-  margin: 10px auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .poster-part img {
-  margin-top: 50px;
   width: 90%;
   max-width: 400px;
 }
@@ -341,12 +346,12 @@ li:active {
   font-size: 2rem;
 }
 
-.question > .question-part > p {
+/* .question > .question-part > p {
   font-size: 2rem;
 }
 .question > .question-part > ul li {
   font-size: 1.5rem;
-}
+} */
 
 /* Responsive */
 
@@ -361,14 +366,14 @@ li:active {
   header {
     font-size: 2rem;
   }
-  .text-block {
+  /* .text-block {
     height: 15vh;
     margin-top: 25px;
     padding: 0px 0px 30px 0px;
-  }
-  .test-window {
+  } */
+  /* .test-window {
     height: 71vh;
-  }
+  } */
   .content .text-block > h1 {
     font-size: 2.5rem;
   }
@@ -393,16 +398,18 @@ li:active {
   main {
     width: 90%;
   }
-  .text-block {
+  .question {
+  }
+  /* .text-block {
     height: 15vh;
     padding-bottom: 35px;
-  }
+  } */
   header {
     font-size: 2.5rem;
   }
-  .test-window {
+  /* .test-window {
     height: 69vh;
-  }
+  } */
   .content .text-block > h1 {
     font-size: 3rem;
   }
@@ -411,5 +418,35 @@ li:active {
   }
   footer {
     font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .content .text-block > p {
+    width: 50%;
+  }
+
+  #eraserhead-gif {
+    width: 60vh;
+  }
+
+  #dalton-gif {
+    width: 45vh;
+  }
+
+  #gus-gif {
+    width: 40vh;
+  }
+
+  #travolta-gif {
+    width: 30vh;
+  }
+
+  #review-gif {
+    width: 50vh;
+  }
+
+  #dolinhead {
+    width: 60vh;
   }
 }

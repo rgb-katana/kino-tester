@@ -62,6 +62,8 @@ function showMenuAndText() {
 
 // BACKWARS
 function goBackward() {
+  currentSlide = document.querySelector(`.question${slide}`);
+  currentSlide?.removeAttribute('style');
   console.log(`backward. current slide is: ${slide}`);
   currentSlide?.classList.add('hidden');
   slide -= 1;
@@ -74,12 +76,20 @@ function goBackward() {
   } else {
     document.querySelector('.finish').classList.add('hidden');
     document.querySelector('.forward').classList.remove('hidden');
+    currentSlide = document.querySelector(`.question${slide}`);
+    console.log(currentSlide);
+    currentSlide.style.display = 'flex';
+    currentSlide.style.justifyContent = 'space-around';
+    currentSlide.style.alignItems = 'center';
+    currentSlide.style.flexDirection = 'column';
     currentSlide.classList.remove('hidden');
   }
 }
 
 // FORWARDS
 function goForward() {
+  currentSlide = document.querySelector(`.question${slide}`);
+  currentSlide?.removeAttribute('style');
   slide += 1;
   console.log(slide);
   getNewInfo(slide);
@@ -126,6 +136,10 @@ function goForward() {
   if (slide == 10) {
     currentSlide?.classList.add('hidden');
     currentSlide = document.querySelector(`.question${slide}`);
+    currentSlide.style.display = 'flex';
+    currentSlide.style.justifyContent = 'space-around';
+    currentSlide.style.alignItems = 'center';
+    currentSlide.style.flexDirection = 'column';
     currentSlide.classList.remove('hidden');
     document.querySelector('.forward').classList.add('hidden');
     document.querySelector('.finish').classList.remove('hidden'); // REDACTIROVAT'
@@ -133,6 +147,11 @@ function goForward() {
     console.log(`forward. current slide is: ${slide}`);
     currentSlide?.classList.add('hidden');
     currentSlide = document.querySelector(`.question${slide}`);
+    console.log(currentSlide);
+    currentSlide.style.display = 'flex';
+    currentSlide.style.justifyContent = 'space-around';
+    currentSlide.style.alignItems = 'center';
+    currentSlide.style.flexDirection = 'column';
     currentSlide.classList.remove('hidden');
   }
 }
@@ -187,6 +206,8 @@ function getNewInfo(slide) {
 }
 
 document.querySelector('.finish').addEventListener('click', function () {
+  currentSlide = document.querySelector(`.question10`);
+  currentSlide?.removeAttribute('style');
   let result = 0;
   Object.keys(resultObj).forEach(function (currentValue, index) {
     console.log(resultObj[currentValue]);
@@ -213,6 +234,10 @@ document.querySelector('.finish').addEventListener('click', function () {
   currentSlide.classList.add('hidden');
   document.querySelector('.nav-part').classList.add('hidden');
   document.querySelector('.result').classList.remove('hidden');
+  document.querySelector('.result').style.display = 'flex';
+  document.querySelector('.result').style.flexDirection = 'column';
+  document.querySelector('.result').style.alignItems = 'center';
+  document.querySelector('.result').style.justifyContent = 'center';
   let imageNumber = result == 100 ? 10 : Math.floor(result / 10);
   imageNumber = imageNumber == 0 ? 1 : imageNumber;
   console.log(imageNumber);
